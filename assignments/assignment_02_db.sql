@@ -1,0 +1,123 @@
+# Create the database
+create database assignment_02_db;
+
+# Use this database for these statements
+use assignment_02_db;
+
+# Create the people_cars table
+create table PeopleCars(
+	PersonID int not null auto_increment,	# ID for each record
+    LastName varchar(255) not null,			# Last name
+    MiddleName varchar(255),				# Middle name
+    FirstName varchar(255) not null,		# First name
+    CarMake varchar(255),					# Car Make (Honda, Toyota, etc.)
+    CarModel varchar(255),					# Civic, Corolla, etc. 
+    CarYear int,							# Model year
+    CarMileage double,						# Floating point for miles on car
+    DatePurchased date,						# When purchased by person
+    primary key (PersonID)					# Make sure each ID is unique
+);
+
+# Generated Data
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Bergstrom', 'Deanna', 'Kyra', 'Volkswagen', 'Jetta', 2017, 56262.67, '2019-3-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Kemmer', 'Lamar', 'Marcos', 'Volkswagen', 'Beetle', 2022, 152261.58, '2022-7-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Yost', 'Caleb', 'Jaycee', 'Honda', 'CR-V', 2004, 120834.66, '2018-7-11');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Larkin', 'Asa', 'Carlos', 'Volkswagen', 'Golf', 2011, 90944.94, '2013-6-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Strosin', 'Dashawn', 'Alvena', 'Nissan', 'Sentra', 1998, 14161.84, '2021-2-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Hettinger', 'Floy', 'Aubrey', 'Toyota', 'Corolla', 2011, 154357.64, '2016-1-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Parisian', 'Evelyn', 'Reid', 'Ford', 'Mustang', 2011, 40971.81, '2019-1-22');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Schmidt', 'Mariano', 'Ramon', 'Honda', 'CR-V', 2011, 27084.27, '2012-1-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Moen', 'Damian', 'Jamarcus', 'Subaru', 'Forester', 2001, 18371.02, '2011-11-11');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dickinson', 'Aletha', 'Ole', 'Volvo', 'XC90', 1998, 62750.57, '2004-5-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Barrows', 'Jonatan', 'Augusta', 'Volvo', 'XC90', 2005, 192397.61, '2006-11-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Hayes', 'Novella', 'Dessie', 'Honda', 'CR-V', 2022, 10592.73, '2022-1-11');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Gerhold', 'Dallin', 'Dustin', 'Nissan', 'Sentra', 1999, 136991.15, '2017-1-12');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Deckow', 'Kyle', 'Glennie', 'Subaru', 'Forester', 2017, 83766.04, '2022-7-11');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Olson', 'Gladyce', 'Candido', 'Honda', 'Civic', 2005, 81901.77, '2007-5-9');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Hane', 'Derick', 'Jacques', 'Subaru', 'Crosstrek', 2017, 145996.29, '2018-10-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Effertz', 'Marianna', 'Mylene', 'Ford', 'F-150', 2001, 59171.47, '2005-9-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Rogahn', 'Orville', 'Trinity', 'Toyota', 'Corolla', 2015, 53454.87, '2020-8-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Rodriguez', 'Barney', 'Janice', 'Volkswagen', 'Jetta', 2015, 166135.77, '2019-4-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Kemmer', 'Emmie', 'Ruth', 'Subaru', 'Forester', 2006, 136536.84, '2021-4-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Turcotte', 'Hollie', 'Kaylah', 'Volkswagen', 'Golf', 2004, 81437.77, '2016-10-17');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('FakeLastName', 'Ashley', 'Ona', 'Toyota', 'Camry', 2002, 13311.25, '2021-4-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Streich', 'Emily', 'Tina', 'Ford', 'F-150', 2002, 177767.03, '2010-8-22');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Mayert', 'Haylie', 'Penelope', 'Ford', 'Mustang', 2009, 32213.05, '2014-9-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Carter', 'Howell', 'Murl', 'Honda', 'CR-V', 2000, 187550.63, '2006-7-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Hand', 'Priscilla', 'Estrella', 'Volkswagen', 'Golf', 2016, 20982.96, '2017-2-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Shields', 'Schuyler', 'Willa', 'Nissan', 'Maxima', 2021, 194146.7, '2021-2-1');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Marks', 'Lisandro', 'Juana', 'Toyota', 'Camry', 1998, 190049.97, '2018-4-17');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Cremin', 'Leonie', 'Annabell', 'Toyota', 'Corolla', 2005, 39630.93, '2014-3-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Monahan', 'Estrella', 'Duane', 'Nissan', 'Maxima', 2009, 134573.69, '2011-1-21');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dibbert', 'Celestine', 'Mina', 'Subaru', 'Impreza', 1999, 90294.57, '2005-2-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Wiza', 'Jabari', 'Nelson', 'Subaru', 'Crosstrek', 2013, 87453.64, '2019-4-6');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Willms', 'Jermaine', 'Josianne', 'Nissan', 'Sentra', 2019, 181447.42, '2020-8-9');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dickens', 'Jana', 'Timmy', 'Chevrolet', 'Malibu', 2016, 142793.99, '2019-11-12');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Glover', 'Stanton', 'Rasheed', 'Volkswagen', 'Jetta', 2006, 189771.81, '2012-10-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Fritsch', 'Albin', 'Cleveland', 'Nissan', 'Sentra', 2009, 191060.37, '2011-6-22');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Stanton', 'Stewart', 'Gaston', 'Volkswagen', 'Golf', 2005, 16147.86, '2010-8-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Effertz', 'Florencio', 'Lavinia', 'Volkswagen', 'Jetta', 2019, 100802.9, '2019-8-15');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Welch', 'Faustino', 'Daniella', 'Nissan', 'Sentra', 2022, 74069.07, '2022-1-7');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Doyle', 'Darren', 'Koby', 'Volkswagen', 'Jetta', 2006, 82530.59, '2016-8-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Parisian', 'Kristin', 'Herman', 'Volvo', 'XC90', 2000, 71757.51, '2003-7-11');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Kreiger', 'Elody', 'Armani', 'Chevrolet', 'Silverado', 2001, 147914.9, '2002-6-7');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Beatty', 'Jaida', 'Kayley', 'Subaru', 'Crosstrek', 2001, 112499.1, '2009-6-9');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Schamberger', 'Nasir', 'Cesar', 'Volkswagen', 'Golf', 2011, 134765.9, '2020-10-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Reichel', 'Randal', 'Linnie', 'Subaru', 'Impreza', 2019, 94453.62, '2019-2-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Frami', 'Gerhard', 'Mackenzie', 'Chevrolet', 'Silverado', 2017, 60280.11, '2019-11-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Bartell', 'Aurore', 'Raquel', 'Subaru', 'Impreza', 1998, 85495.97, '2010-4-2');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Olson', 'Olaf', 'Kathleen', 'Toyota', 'Corolla', 2010, 170477.84, '2019-2-7');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Barton', 'Alyson', 'Victor', 'Chevrolet', 'Corvette', 2010, 85866.68, '2010-1-5');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Nicolas', 'Sammie', 'Geovanni', 'Ford', 'Mustang', 2019, 125214.57, '2019-8-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Johnston', 'Amely', 'Jeffry', 'Volkswagen', 'Jetta', 2010, 283.13, '2018-7-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Murphy', 'Jan', 'Esther', 'Nissan', 'Sentra', 2020, 177837.13, '2020-2-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Victor', 'Salvador', 'Lawson', 'Toyota', 'RAV4', 2002, 195817.05, '2012-5-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Tromp', 'Myrtis', 'Brandi', 'Volkswagen', 'Beetle', 2017, 86878.8, '2020-1-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Farrell', 'Donnell', 'Benedict', 'Volkswagen', 'Beetle', 2004, 47838.74, '2015-1-9');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Larkin', 'Marty', 'Joan', 'Volvo', 'XC90', 2000, 44945.22, '2006-11-22');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dicki', 'Connor', 'Marlen', 'Subaru', 'Impreza', 2018, 13801.65, '2019-3-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Kautzer', 'Mafalda', 'Bertha', 'Volkswagen', 'Jetta', 2011, 178888.65, '2020-8-1');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Tillman', 'Merlin', 'Royal', 'Chevrolet', 'Corvette', 2003, 88150.98, '2010-10-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Klein', 'Werner', 'Shaun', 'Chevrolet', 'Malibu', 2010, 89322.87, '2010-8-6');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Will', 'Nola', 'Drew', 'Chevrolet', 'Malibu', 2010, 79542.21, '2017-3-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Baumbach', 'Yadira', 'Josiane', 'Volkswagen', 'Golf', 1999, 155899.25, '2008-11-17');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Sanford', 'Vickie', 'Shayne', 'Subaru', 'Forester', 2010, 131430.76, '2013-4-6');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Bradtke', 'Yasmine', 'Howard', 'Chevrolet', 'Malibu', 2016, 94588.42, '2017-8-7');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Mosciski', 'Eudora', 'Ewald', 'Subaru', 'Forester', 2000, 154889.94, '2004-4-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Hudson', 'Dusty', 'Tiffany', 'Subaru', 'Forester', 1999, 138384.59, '2013-6-12');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Cummerata', 'Genesis', 'Charles', 'Nissan', 'Maxima', 2015, 118395.16, '2018-2-19');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Strosin', 'Silas', 'Dana', 'Volkswagen', 'Golf', 2019, 44952.86, '2021-8-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Nolan', 'Montana', 'Ashlee', 'Ford', 'Mustang', 2012, 123880.8, '2015-1-15');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dietrich', 'Lucious', 'Jackson', 'Toyota', 'Corolla', 2002, 111304.56, '2007-5-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Smith', 'Winifred', 'Reymundo', 'Toyota', 'RAV4', 2015, 144521.81, '2022-1-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Bogisich', 'Ferne', 'Gertrude', 'Subaru', 'Crosstrek', 2009, 89805.57, '2009-3-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Waters', 'Randy', 'Abbie', 'Subaru', 'Crosstrek', 1998, 4686.79, '1998-4-2');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Breitenberg', 'Abel', 'Neoma', 'Toyota', 'RAV4', 2022, 107998.88, '2022-9-18');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dare', 'Vivian', 'Nettie', 'Nissan', 'Sentra', 2008, 126276.33, '2015-2-24');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Wilkinson', 'Uriel', 'Lexie', 'Toyota', 'Camry', 2006, 179704.47, '2008-5-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Kassulke', 'Sonia', 'Antwan', 'Volkswagen', 'Beetle', 2011, 192427.84, '2015-1-17');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Williamson', 'Freeda', 'Princess', 'Volkswagen', 'Jetta', 2008, 10430.94, '2009-9-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Johnson', 'Linnie', 'Angie', 'Volkswagen', 'Beetle', 2005, 199561.51, '2007-10-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Crona', 'Nicolas', 'Leopoldo', 'Toyota', 'Camry', 2013, 51067.44, '2013-5-2');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Reichel', 'Watson', 'Cornelius', 'Subaru', 'Crosstrek', 2020, 146849.33, '2021-9-14');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Walsh', 'Dolores', 'Omer', 'Honda', 'Civic', 2002, 92324.29, '2007-1-10');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Huel', 'Melyssa', 'Haylie', 'Volkswagen', 'Beetle', 2011, 38971.56, '2015-9-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Moore', 'Maya', 'Charles', 'Subaru', 'Forester', 2004, 69296.33, '2021-11-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Smith', 'Kristina', 'Augustine', 'Ford', 'F-150', 2020, 80729.53, '2021-8-16');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Waelchi', 'Tommie', 'Jaylon', 'Toyota', 'RAV4', 2011, 59359.75, '2016-3-26');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Emard', 'Bernard', 'Meghan', 'Toyota', 'RAV4', 2011, 113109.18, '2021-10-12');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Dare', 'Jaylen', 'Jessika', 'Toyota', 'Corolla', 2008, 72261.72, '2022-7-21');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Cartwright', 'Jody', 'Dora', 'Toyota', 'RAV4', 1999, 91294.19, '2002-10-27');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Haley', 'June', 'Muriel', 'Honda', 'CR-V', 2000, 6682.97, '2004-1-19');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Weber', 'Candelario', 'Lavern', 'Honda', 'Civic', 2015, 1901.53, '2019-2-3');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Koepp', 'Helmer', 'Bethel', 'Honda', 'Civic', 2018, 110029, '2020-8-25');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Corkery', 'Rubie', 'Reagan', 'Toyota', 'Corolla', 2011, 116853.26, '2020-7-20');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Lindgren', 'Zoe', 'Juwan', 'Nissan', 'Sentra', 2010, 54046.27, '2011-1-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Quitzon', 'Monserrat', 'Darron', 'Ford', 'Mustang', 2000, 71246.35, '2012-8-3');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Ullrich', 'Hank', 'Destiny', 'Volkswagen', 'Beetle', 2018, 157691.8, '2022-4-4');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Lynch', 'Greyson', 'Wilson', 'Nissan', 'Sentra', 2000, 451.2, '2007-2-16');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Langworth', 'Lon', 'Briana', 'Honda', 'Civic', 2011, 88012.35, '2013-3-16');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Willms', 'Tracy', 'Ned', 'Nissan', 'Maxima', 2013, 38803.5, '2016-10-13');
+INSERT INTO `assignment_02_db`.`peoplecars` (`LastName`, `MiddleName`, `FirstName`, `CarMake`, `CarModel`, `CarYear`, `CarMileage`, `DatePurchased`) VALUES ('Veum', 'Alvina', 'Casimir', 'Chevrolet', 'Corvette', 2017, 55660.47, '2018-2-6');
+
+#END OF SCRIPT
